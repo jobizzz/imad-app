@@ -82,15 +82,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articles[articleOne]);
+  res.send(createTemplate(articles[articleOne]));
 });
 
 app.get('/article-two', function (req, res) {
- res.send(createTemplate(articles[articleTwo]);
+ res.send(createTemplate(articles[articleTwo]));
 });
 
 app.get('/article-three', function (req, res) {
- res.send(createTemplate(articles[articleThree]);
+ res.send(createTemplate(articles[articleThree]));
 });
 
 app.get('/ui/style.css', function (req, res) {
