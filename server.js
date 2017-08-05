@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
+var articles={
+   articleOne:{
     title:"Article One|Jobis",
     heading:"Article One",
     date:"Aug 5,2017",
@@ -21,6 +22,41 @@ var articleOne={
                 this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
             </p>   
     `
+    },
+    articleTwo:{
+    title:"Article One|Jobis",
+    heading:"Article One",
+    date:"Aug 5,2017",
+    content:`
+            <p>
+                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+            </p>
+
+            <p>
+                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+            </p>
+            <p>
+                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+            </p>   
+    `
+    }
+    articleThree:{
+    title:"Article One|Jobis",
+    heading:"Article One",
+    date:"Aug 5,2017",
+    content:`
+            <p>
+                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+            </p>
+
+            <p>
+                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+            </p>
+            <p>
+                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+            </p>   
+    `
+    }
 };
 
 function createTemplate(data){
@@ -59,15 +95,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
+  res.send(createTemplate(articles[articleOne]);
 });
 
 app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+ res.send(createTemplate(articles[articleTwo]);
 });
 
 app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+ res.send(createTemplate(articles[articleThree]);
 });
 
 app.get('/ui/style.css', function (req, res) {
