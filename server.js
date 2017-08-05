@@ -24,36 +24,23 @@ var articles={
     `
     },
     articleTwo:{
-    title:"Article One|Jobis",
-    heading:"Article One",
-    date:"Aug 5,2017",
+    title:"Article Two|Jobis",
+    heading:"Article Two",
+    date:"Aug 7,2017",
     content:`
             <p>
-                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
-            </p>
-
-            <p>
-                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
-            </p>
-            <p>
-                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+                this is the content of article 2
             </p>   
     `
-    }
+    },
     articleThree:{
-    title:"Article One|Jobis",
-    heading:"Article One",
-    date:"Aug 5,2017",
+    title:"Article Three|Jobis",
+    heading:"Article Three",
+    date:"Aug 10,2017",
     content:`
             <p>
-                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
-            </p>
-
-            <p>
-                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
-            </p>
-            <p>
-                this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.this is the content of article 1.
+                this is the content of article 3
+            
             </p>   
     `
     }
