@@ -6,6 +6,7 @@ element.innerHTML="New Value";
 
 //TO move the image on click
 var img=document.getElementById("madi");
+img.style.marginLeft=0;
 var marginLeft=0;
 var moveRight=function(){
   marginLeft+=1;
