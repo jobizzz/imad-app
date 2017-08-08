@@ -33,8 +33,7 @@ submit.onclick= function(){
       {
           if(request.status===200)
           {
-                 var nameInput=document.getElementById("name");
-     var name=nameInput.value;
+             
               var names=request.responseText;
               names=JSON.parse(names);
               var list='';
@@ -44,8 +43,10 @@ submit.onclick= function(){
               ul.innerHTML=list;
           }
       }
+      
     };
-
+    var nameInput=document.getElementById("name");
+     var name=nameInput.value;
     request.open("GET","http://jobisjames10.imad.hasura-app.io/submit?name="+name,true);
     request.send(null);
 };
