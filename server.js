@@ -96,7 +96,7 @@ var names=[] ;
 app.get('/submit/:name', function (req, res) {
     var name=req.params.name;
     names.push(name);
-  res.send(JSON.sendify(names));
+  res.send(JSON.stringify(names));
 });
 
 app.get('/ui/style.css', function (req, res) {
