@@ -92,7 +92,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-var names[] ;
+var names=[] ;
 app.get('/submit/:name', function (req, res) {
     var name=req.params.name;
     names.push(name);
