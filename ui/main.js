@@ -21,12 +21,13 @@ button.onclick = function(){
     request.open("GET","http://jobisjames10.imad.hasura-app.io/counter",true);
     request.send(null);
 };
-var nameInput=document.getElementById("name");
-var name=nameInput.value;
+
 var submit=document.getElementById("submit_btn");
 submit.onclick= function(){
 
      var request=new XMLHttpRequest();
+     var nameInput=document.getElementById("name");
+     var name=nameInput.value;
     //Capture the response and store it in a variable
     request.onreadystatechange=function(){
       if(request.readyState===XMLHttpRequest.DONE) 
