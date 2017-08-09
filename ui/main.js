@@ -54,6 +54,7 @@ submit.onclick= function(){
 var comment=document.getElementById("COMMENT");
 
 comment.onclick= function(){
+    alert("clicked");
     console.log("clicked");
      var request=new XMLHttpRequest();
 
