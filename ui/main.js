@@ -52,8 +52,9 @@ submit.onclick= function(){
 };
 
 var comment=document.getElementById("COMMENT");
-comment.onclick= function(){
 
+comment.onclick= function(){
+    console.log("clicked");
      var request=new XMLHttpRequest();
 
     //Capture the response and store it in a variable
