@@ -109,9 +109,9 @@ function createTemplate(data){
                 };
                 var nameInput=document.getElementById("com");
                  var name=nameInput.value;
-                request.open("GET","http://jobisjames10.imad.hasura-app.io/:articleName?name="+name,true);
+                request.open("GET","http://jobisjames10.imad.hasura-app.io/submit?comment="+name,true);
                 request.send(null);
-            };
+1            };
         </script>
         
     </html>
@@ -129,14 +129,26 @@ app.get('/counter', function (req, res) {
 });
 
 var names=[] ;
+var comments = []
 app.get('/submit', function (req, res) {
+    if(req.query.name){
     var name=req.query.name;
     names.push(name);
   res.send(JSON.stringify(names));
+    }
+    else{
+   var cmt = request.query.comment;
+    comments.push(cmt);
+     res.send(JSON.stringify(comments));
+    }
 });
 
+1
+comments = [];
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
+    
+   
   res.send(createTemplate(articles[articleName]));
 });
 
