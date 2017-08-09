@@ -74,11 +74,11 @@ function createTemplate(data){
             </div>
             <hr/>
             <div id="comment">
-                 <input  type="text" id="com" placeholder="name"></input>
+                 <input  type="text" id="com" placeholder="com"></input>
                 <input type="submit" value="COMMENT" id="COMMENT"></input>
             </div>
             <ul id="inbox">
-            
+            <li>dsjkdl</li>
             </ul>
         </body>
     </html>
