@@ -137,7 +137,7 @@ app.get('/submit', function (req, res) {
   res.send(JSON.stringify(names));
     }
     else{
-   var cmt = request.query.comment;
+   var cmt = reqt.query.comment;
     comments.push(cmt);
      res.send(JSON.stringify(comments));
     }
