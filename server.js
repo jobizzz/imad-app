@@ -78,7 +78,7 @@ function createTemplate(data){
                 <input type="submit" value="COMMENT" id="COMMENT"></input>
             </div>
             <ul id="inbox">
-            <li>dsjkdl</li>
+            
             </ul>
         </body>
     </html>
