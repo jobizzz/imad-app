@@ -1,7 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool=require('pg').Pool;
 
+var config={
+  user:'jobisjames10',
+  database:'jobisjames10',
+  host:'db.imad.hasura-app.io',
+  port:'5432',
+  password:process.env.DB_PASSWORD
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -110,7 +118,7 @@ function createTemplate(data){
                  var name=nameInput.value;
                 request.open("GET","http://jobisjames10.imad.hasura-app.io/submit?comment="+name,true);
                 request.send(null);
-1            };
+           };
         </script>
         
     </html>
@@ -121,6 +129,20 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var pool=new Pool(config);
+app.get('/test-db', function (req, res) {
+  //Make a select request
+  //return a response with the result
+  pool.query('SELECT * FROM test',function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      }
+      else{
+          res.send(JSON.stringify(result));
+      }
+  });
+});
+
 var counter=0;
 app.get('/counter', function (req, res) {
     counter++;
@@ -128,7 +150,7 @@ app.get('/counter', function (req, res) {
 });
 
 var names=[] ;
-var comments = []
+var comments = [];
 app.get('/submit', function (req, res) {
     if(req.query.name){
     var name=req.query.name;
@@ -142,7 +164,7 @@ app.get('/submit', function (req, res) {
     }
 });
 
-1
+
 comments = [];
 app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;
