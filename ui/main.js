@@ -22,7 +22,31 @@ submit.onclick= function(){
              `;
              logout=document.getElementById("submit_out");
               console.log(logout);
-              if (logout !== null){
+              setLogout();
+          }
+          else if(request.status===403)
+          {
+             alert("Invalid username/password");
+          }
+          else if(request.status===500)
+         {
+             alert("something went wrong in server");
+          }
+      }
+      
+      
+      console.log("test");
+    };
+    var username=document.getElementById("username").value;
+     var password=document.getElementById("password").value;
+    request.open("POST","http://jobisjames10.imad.hasura-app.io/login",true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
+
+//Register
+function setLogout(){
+       if (logout !== null){
             logout.onclick= function(){
             
                  var request=new XMLHttpRequest();
@@ -52,28 +76,7 @@ submit.onclick= function(){
                 };
             };
           }
-          else if(request.status===403)
-          {
-             alert("Invalid username/password");
-          }
-          else if(request.status===500)
-         {
-             alert("something went wrong in server");
-          }
-      }
-      
-      
-      console.log("test");
-    };
-    var username=document.getElementById("username").value;
-     var password=document.getElementById("password").value;
-    request.open("POST","http://jobisjames10.imad.hasura-app.io/login",true);
-    request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({username:username,password:password}));
-};
-
-//Register
-
+}
 var reg=document.getElementById("submit_reg");
 console.log(reg);
 reg.onclick= function(){
