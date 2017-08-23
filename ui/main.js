@@ -7,7 +7,7 @@ console.log(login);
 submit.onclick= function(){
 
      var request=new XMLHttpRequest();
-
+    
     //Capture the response and store it in a variable
     request.onreadystatechange=function(){
       if(request.readyState===XMLHttpRequest.DONE) 
@@ -20,6 +20,7 @@ submit.onclick= function(){
              <br>
              <input type="submit" id="submit_out" value="Logout" />
              `;
+             logout=document.getElementById("submit_out");
               console.log(login);
           }
           else if(request.status===403)
@@ -32,7 +33,7 @@ submit.onclick= function(){
           }
       }
       
-      logout=document.getElementById("submit_out");
+      
       console.log("test");
     };
     var username=document.getElementById("username").value;
