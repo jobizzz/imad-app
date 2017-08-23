@@ -14,7 +14,7 @@ submit.onclick= function(){
           {
              console.log("User logged in ");
              alert("LOGGED IN SUCCESSFULLY");
-             login.innerHTML=`<p>Hi ${username}</p>`;
+             login.innerHTML=`Hi ${username}`;
           }
           else if(request.status===403)
           {
