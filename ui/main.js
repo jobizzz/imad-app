@@ -49,7 +49,7 @@ reg.onclick= function(){
           else {
              
              alert("REGISTERED SUCCESSFULLY");
-             reg.innerHTML="Registered";
+             reg.innerHTML="<value=Registered>";
           }
          
       }
