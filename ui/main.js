@@ -49,7 +49,7 @@ reg.onclick= function(){
           else {
              
              alert("REGISTERED SUCCESSFULLY");
-             reg.innerHTML="<value=Registered>";
+             reg.innerHTML=` <input type="submit" value="Registered"/>`;
           }
          
       }
