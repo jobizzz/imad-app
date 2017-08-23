@@ -108,12 +108,13 @@ logout.onclick= function(){
       }
       
     };
+     
+    request.open("GET","http://jobisjames10.imad.hasura-app.io/logout",true);
+    request.send(null);
 };
   //  var username=document.getElementById("username").value;
    // var password=document.getElementById("password").value;
-    var request=new XMLHttpRequest();
-    request.open("GET","http://jobisjames10.imad.hasura-app.io/logout",true);
-    request.send(null);
+   
    // request.setRequestHeader('Content-Type','application/json');
   //  request.send(JSON.stringify({username:username,password:password}));
 }
