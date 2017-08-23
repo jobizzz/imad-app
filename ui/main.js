@@ -1,6 +1,7 @@
 //submit username & password
 
 var submit=document.getElementById("submit_btn");
+var login=document.getElementById("login");
 submit.onclick= function(){
 
      var request=new XMLHttpRequest();
@@ -13,7 +14,7 @@ submit.onclick= function(){
           {
              console.log("User logged in ");
              alert("LOGGED IN SUCCESSFULLY");
-             submit.value="Logout";
+             login.innerHTML="Logout";
           }
           else if(request.status===403)
           {
@@ -39,7 +40,7 @@ var reg=document.getElementById("submit_reg");
 reg.onclick= function(){
 
      var request=new XMLHttpRequest();
-
+        reg.value="Registering";
     //Capture the response and store it in a variable
     request.onreadystatechange=function(){
       if(request.readyState===XMLHttpRequest.DONE) 
@@ -48,7 +49,7 @@ reg.onclick= function(){
              alert("something went wrong in server");
           }
           else {
-             reg.value="Registering";
+             
              alert("REGISTERED SUCCESSFULLY");
              reg.value="Registered";
           }
