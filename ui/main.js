@@ -70,10 +70,11 @@ reg.onclick= function(){
 //Louout
 
 var logout=document.getElementById("submit_out");
+
 logout.onclick= function(){
 
      var request=new XMLHttpRequest();
-       ;
+       
     //Capture the response and store it in a variable
     request.onreadystatechange=function(){
       if(request.readyState===XMLHttpRequest.DONE) 
