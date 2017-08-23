@@ -1,7 +1,9 @@
 //submit username & password
 var logout=null;
 var submit=document.getElementById("submit_btn");
+console.log(submit);
 var login=document.getElementById("login");
+console.log(login);
 submit.onclick= function(){
 
      var request=new XMLHttpRequest();
@@ -18,7 +20,7 @@ submit.onclick= function(){
              <br>
              <input type="submit" id="submit_out" value="Logout" />
              `;
-              
+              console.log(login);
           }
           else if(request.status===403)
           {
@@ -41,6 +43,7 @@ submit.onclick= function(){
 //Register
 
 var reg=document.getElementById("submit_reg");
+console.log(reg);
 reg.onclick= function(){
 
      var request=new XMLHttpRequest();
