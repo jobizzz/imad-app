@@ -1,5 +1,5 @@
 //submit username & password
-var logout;
+var logout=null;
 var submit=document.getElementById("submit_btn");
 var login=document.getElementById("login");
 submit.onclick= function(){
@@ -18,7 +18,7 @@ submit.onclick= function(){
              <br>
              <input type="submit" id="submit_out" value="Logout" />
              `;
-              logout=document.getElementById("submit_out");
+              
           }
           else if(request.status===403)
           {
@@ -29,7 +29,7 @@ submit.onclick= function(){
              alert("something went wrong in server");
           }
       }
-      
+      logout=document.getElementById("submit_out");
     };
     var username=document.getElementById("username").value;
      var password=document.getElementById("password").value;
