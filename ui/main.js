@@ -22,7 +22,6 @@ submit.onclick= function(){
              `;
              logout=document.getElementById("submit_out");
               console.log(logout);
-              setLogout();
           }
           else if(request.status===403)
           {
@@ -76,8 +75,10 @@ reg.onclick= function(){
 };
 
 //Louout
-function setLogout(){
-    if (logout !== null){
+
+//var logout=document.getElementById("submit_out");
+console.log(logout);
+if (logout !== null){
 logout.onclick= function(){
 
      var request=new XMLHttpRequest();
@@ -105,7 +106,7 @@ logout.onclick= function(){
       }
       
     };
-};
+}
   //  var username=document.getElementById("username").value;
    // var password=document.getElementById("password").value;
     request.open("GET","http://jobisjames10.imad.hasura-app.io/logout",true);
@@ -113,10 +114,6 @@ logout.onclick= function(){
    // request.setRequestHeader('Content-Type','application/json');
   //  request.send(JSON.stringify({username:username,password:password}));
 }
-}
-//var logout=document.getElementById("submit_out");
-console.log(logout);
-
 
 
 
