@@ -67,5 +67,42 @@ reg.onclick= function(){
     request.send(JSON.stringify({username:username,password:password}));
 };
 
+//Louout
+
+var logout=document.getElementById("submit_out");
+logout.onclick= function(){
+
+     var request=new XMLHttpRequest();
+        reg.value="Registering";
+    //Capture the response and store it in a variable
+    request.onreadystatechange=function(){
+      if(request.readyState===XMLHttpRequest.DONE) 
+      {
+          if(request.status===500) {
+             alert("something went wrong in server");
+          }
+          else {
+             
+             alert("Logout");
+             login.innerHTML=`<h3>Login to unlock awesome features</h3>
+                <div >
+                    <input type="text" id="username" placeholder="username"/>
+                    <input type="password" id="password" />
+                    <br><br>
+                    <input type="submit" id="submit_btn" value="Login" />
+                    <input type="submit" id="submit_reg" value="Register"/>
+                </div> `;
+          }
+         
+      }
+      
+    };
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+    request.open("POST","http://jobisjames10.imad.hasura-app.io/create-user",true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
+
 
 
