@@ -73,7 +73,7 @@ var logout=document.getElementById("submit_out");
 logout.onclick= function(){
 
      var request=new XMLHttpRequest();
-        reg.value="Registering";
+       ;
     //Capture the response and store it in a variable
     request.onreadystatechange=function(){
       if(request.readyState===XMLHttpRequest.DONE) 
@@ -100,6 +100,7 @@ logout.onclick= function(){
   //  var username=document.getElementById("username").value;
    // var password=document.getElementById("password").value;
     request.open("GET","http://jobisjames10.imad.hasura-app.io/logout",true);
+    request.send(null);
    // request.setRequestHeader('Content-Type','application/json');
   //  request.send(JSON.stringify({username:username,password:password}));
 };
