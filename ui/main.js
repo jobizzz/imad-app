@@ -1,5 +1,5 @@
 //submit username & password
-var logout=null;
+var logout;
 var submit=document.getElementById("submit_btn");
 console.log(submit);
 var login=document.getElementById("login");
@@ -21,35 +21,6 @@ submit.onclick= function(){
              <input type="submit" id="submit_out" value="Logout" />
              `;
              logout=document.getElementById("submit_out");
-             if (logout !== null){
-logout.onclick= function(){
-
-     var request=new XMLHttpRequest();
-       
-    //Capture the response and store it in a variable
-    request.onreadystatechange=function(){
-      if(request.readyState===XMLHttpRequest.DONE) 
-      {
-          if(request.status===500) {
-             alert("something went wrong in server");
-          }
-          else {
-             
-             alert("Logout");
-             login.innerHTML=`<h3>Login to unlock awesome features</h3>
-                <div >
-                    <input type="text" id="username" placeholder="username"/>
-                    <input type="password" id="password" />
-                    <br><br>
-                    <input type="submit" id="submit_btn" value="Login" />
-                    <input type="submit" id="submit_reg" value="Register"/>
-                </div> `;
-          }
-         
-      }
-      
-    };
-}
               console.log(logout);
           }
           else if(request.status===403)
@@ -107,7 +78,35 @@ reg.onclick= function(){
 
 //var logout=document.getElementById("submit_out");
 console.log(logout);
+if (logout !== null){
+logout.onclick= function(){
 
+     var request=new XMLHttpRequest();
+       
+    //Capture the response and store it in a variable
+    request.onreadystatechange=function(){
+      if(request.readyState===XMLHttpRequest.DONE) 
+      {
+          if(request.status===500) {
+             alert("something went wrong in server");
+          }
+          else {
+             
+             alert("Logout");
+             login.innerHTML=`<h3>Login to unlock awesome features</h3>
+                <div >
+                    <input type="text" id="username" placeholder="username"/>
+                    <input type="password" id="password" />
+                    <br><br>
+                    <input type="submit" id="submit_btn" value="Login" />
+                    <input type="submit" id="submit_reg" value="Register"/>
+                </div> `;
+          }
+         
+      }
+      
+    };
+}
   //  var username=document.getElementById("username").value;
    // var password=document.getElementById("password").value;
     request.open("GET","http://jobisjames10.imad.hasura-app.io/logout",true);
