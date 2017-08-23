@@ -21,7 +21,7 @@ submit.onclick= function(){
              <input type="submit" id="submit_out" value="Logout" />
              `;
              logout=document.getElementById("submit_out");
-              console.log(login);
+              console.log(logout);
           }
           else if(request.status===403)
           {
