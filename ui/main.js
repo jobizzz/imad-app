@@ -70,7 +70,7 @@ reg.onclick= function(){
 //Louout
 
 var logout=document.getElementById("submit_out");
-
+console.log(logout);
 logout.onclick= function(){
 
      var request=new XMLHttpRequest();
