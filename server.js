@@ -125,20 +125,19 @@ app.post('/login', function (req, res) {
     //username password
     var username=req.body.username;
     var password=req.body.password;
-    console.log(username);
     pool.query('SELECT * FROM "user" WHERE username=$1',[username], function(err,result){
        if(err){
       res.status(500).send(err.toString());
       }
       else{
-            if(result.rows.length===0){
+            if(result.rows.length === 0){
                  res.status(402).send("username/password is incorrect");
             }
             else{
                 var dbString=result.rows[0].password;
                 var salt=dbString.split('$')[2];
                 var hashedString=hash(password,salt);
-                console.log(hashedString);
+               
                 if(dbString===hashedString)
                     res.send("Credentials correct");
                 else
