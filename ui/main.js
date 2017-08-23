@@ -32,6 +32,7 @@ submit.onclick= function(){
           }
       }
       logout=document.getElementById("submit_out");
+      console.log(logout);
     };
     var username=document.getElementById("username").value;
      var password=document.getElementById("password").value;
