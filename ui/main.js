@@ -1,5 +1,5 @@
 //submit username & password
-
+var logout;
 var submit=document.getElementById("submit_btn");
 var login=document.getElementById("login");
 submit.onclick= function(){
@@ -18,7 +18,7 @@ submit.onclick= function(){
              <br>
              <input type="submit" id="submit_out" value="Logout" />
              `;
-             var logout=document.getElementById("submit_out");
+              logout=document.getElementById("submit_out");
           }
           else if(request.status===403)
           {
