@@ -18,6 +18,7 @@ submit.onclick= function(){
              <br>
              <input type="submit" id="submit_out" value="Logout" />
              `;
+             var logout=document.getElementById("submit_out");
           }
           else if(request.status===403)
           {
@@ -69,7 +70,7 @@ reg.onclick= function(){
 
 //Louout
 
-var logout=document.getElementById("submit_out");
+//var logout=document.getElementById("submit_out");
 console.log(logout);
 logout.onclick= function(){
 
