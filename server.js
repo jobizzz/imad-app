@@ -130,8 +130,9 @@ app.post('/login', function (req, res) {
       res.status(500).send(err.toString());
       }
       else{
-            if(result.rows.length===0)
+            if(result.rows.length===0){
                  res.status(402).send("username/password is incorrect");
+            }
             else{
                 var dbString=result.rows[0].password;
                 var salt=dbString.split('$')[2];
