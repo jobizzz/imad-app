@@ -14,7 +14,10 @@ submit.onclick= function(){
           {
              console.log("User logged in ");
              alert("LOGGED IN SUCCESSFULLY");
-             login.innerHTML=`Hi ${username}`;
+             login.innerHTML=`Hi ${username}
+             <br>
+             <input type="submit" id="submit_btn" value="Logout" />
+             `;
           }
           else if(request.status===403)
           {
