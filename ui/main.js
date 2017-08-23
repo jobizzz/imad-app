@@ -13,6 +13,7 @@ submit.onclick= function(){
           {
              console.log("User logged in ");
              alert("LOGGED IN SUCCESSFULLY");
+             submit.value="Logout";
           }
           else if(request.status===403)
           {
@@ -47,7 +48,7 @@ reg.onclick= function(){
              alert("something went wrong in server");
           }
           else {
-             
+             reg.value="Registering";
              alert("REGISTERED SUCCESSFULLY");
              reg.value="Registered";
           }
